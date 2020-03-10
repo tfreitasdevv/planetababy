@@ -1,0 +1,1 @@
+DateTime dataReferencia = DateTime.now().add(Duration(days: 0));
