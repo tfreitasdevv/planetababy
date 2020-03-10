@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tfreitasdevv.slidymodularmobx3">
+    package="com.tfreitasdevv.planeta_baby">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 

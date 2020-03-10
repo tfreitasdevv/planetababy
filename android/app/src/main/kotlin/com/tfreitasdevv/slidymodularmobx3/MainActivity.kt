@@ -1,4 +1,4 @@
-package com.tfreitasdevv.slidymodularmobx3
+package com.tfreitasdevv.planeta_baby
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
