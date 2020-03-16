@@ -61,9 +61,11 @@ class _SemanalPageState extends ModularState<SemanalPage, SemanalController>
                 ),
               ),
               Tab(
-                child: Text(
-                  "Diferenciado",
-                  textAlign: TextAlign.center,
+                child: FittedBox(
+                  child: Text(
+                    "Diferenciado",
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ),
             ]),
@@ -102,13 +104,13 @@ class _SemanalPageState extends ModularState<SemanalPage, SemanalController>
       ),
       body: Stack(
         children: <Widget>[
-          // Container(
-          //   width: 450,
-          //   child: Image.asset(
-          //     "assets/images/BGHome1.png",
-          //     fit: BoxFit.fitWidth,
-          //   ),
-          // ),
+          Container(
+            width: 450,
+            child: Image.asset(
+              "assets/images/BGHome1.png",
+              fit: BoxFit.fitWidth,
+            ),
+          ),
           TabBarView(
               physics: NeverScrollableScrollPhysics(),
               controller: _tabController,
@@ -131,12 +133,10 @@ class _SemanalPageState extends ModularState<SemanalPage, SemanalController>
           return Center(
             child: Container(
               child: Text(
-                  "Não existem cardápios cadastrados para a data informada",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 20
-                  ),
-                  ),
+                "Não existem cardápios cadastrados para a data informada",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20),
+              ),
             ),
           );
         }
@@ -190,7 +190,7 @@ class _SemanalPageState extends ModularState<SemanalPage, SemanalController>
                 width: 4,
               ),
               Expanded(
-                flex: 4,
+                flex: 5,
                 child: Column(
                   children: <Widget>[
                     _buildItemCardapio("Suco: ", lista[indice].suco),
@@ -255,14 +255,17 @@ class _SemanalPageState extends ModularState<SemanalPage, SemanalController>
     return Row(
       children: <Widget>[
         Expanded(
-          flex: 10,
-          child: Text(
-            title,
-            style: TextStyle(fontWeight: FontWeight.bold),
+          flex: 32,
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              title,
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
         ),
         Expanded(
-          flex: 30,
+          flex: 68,
           child: Text(
             descricao,
             style: TextStyle(),
